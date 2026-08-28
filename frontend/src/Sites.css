@@ -1,0 +1,106 @@
+.Sites {
+  padding: 24px;
+  background: #1a1a2e;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.Sites h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.ptable {
+  display: grid;
+  grid-template-columns: repeat(18, minmax(0, 1fr));
+  grid-template-rows: repeat(7, auto) 12px repeat(2, auto);
+  gap: 4px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.element {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 2px;
+  cursor: default;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  overflow: hidden;
+}
+
+.element:hover {
+  transform: scale(1.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.element__number {
+  font-size: 0.55rem;
+  align-self: flex-start;
+  opacity: 0.85;
+  line-height: 1;
+}
+
+.element__symbol {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.element__name {
+  font-size: 0.42rem;
+  text-align: center;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.element__mass {
+  font-size: 0.42rem;
+  opacity: 0.8;
+  line-height: 1;
+}
+
+/* Couleurs par catégorie */
+.element--alkali { background: #d94f4f; }
+.element--alkaline { background: #e08a3c; }
+.element--transition { background: #d9a441; }
+.element--post-transition { background: #4f9d7e; }
+.element--metalloid { background: #3c9ab0; }
+.element--nonmetal { background: #4f6fd9; }
+.element--halogen { background: #6f4fd9; }
+.element--noble { background: #a34fd9; }
+.element--lanthanide { background: #c94f9d; }
+.element--actinide { background: #c94f6f; }
+.element--unknown { background: #6b7280; }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 28px auto 0;
+  font-size: 0.85rem;
+}
+
+.legend__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend__swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  display: inline-block;
+}
