@@ -1,0 +1,1 @@
+- le frontend est dans le dossier frontend
