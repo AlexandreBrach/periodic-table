@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Sites from './Sites';
+import ElementDetail from './ElementDetail';
 
 function Home() {
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/sites" element={<Sites />} />
+      <Route path="/sites/:number" element={<ElementDetail />} />
     </Routes>
   );
 }

@@ -27,9 +27,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: none;
   border-radius: 4px;
   padding: 2px;
-  cursor: default;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
   overflow: hidden;
 }
@@ -40,10 +43,12 @@
   z-index: 10;
 }
 
+
 .element__number {
-  font-size: 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 700;
   align-self: flex-start;
-  opacity: 0.85;
+  opacity: 1;
   line-height: 1;
 }
 
@@ -64,8 +69,9 @@
 }
 
 .element__mass {
-  font-size: 0.42rem;
-  opacity: 0.8;
+  font-size: 0.58rem;
+  font-weight: 600;
+  opacity: 1;
   line-height: 1;
 }
 
@@ -103,4 +109,87 @@
   height: 16px;
   border-radius: 3px;
   display: inline-block;
+}
+
+/* Disposition à plat quand un tri est actif */
+.ptable--flat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: none;
+  grid-template-rows: none;
+}
+
+.ptable--flat .element {
+  width: 76px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 32px auto 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown__btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.dropdown__btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.dropdown__btn--active {
+  border-color: #a34fd9;
+}
+
+.dropdown__caret {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-left: 4px;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 100%;
+  background: #26264a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 20;
+}
+
+.dropdown__item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+
+.dropdown__item:hover {
+  background: rgba(255, 255, 255, 0.1);
 }

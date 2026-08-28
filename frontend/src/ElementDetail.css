@@ -1,0 +1,144 @@
+.ElementDetail {
+  padding: 24px;
+  background: #1a1a2e;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail__back {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font: inherit;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.detail__back:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.detail__nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.detail__arrow {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.detail__arrow:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.detail__arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.detail__card {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+}
+
+.detail__number {
+  align-self: flex-start;
+  margin: 12px 0 0 14px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.detail__symbol {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.detail__name {
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+.detail__mass {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+.detail__table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 460px;
+}
+
+.detail__table th,
+.detail__table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.detail__table th {
+  font-weight: 600;
+  opacity: 0.75;
+  width: 45%;
+}
+
+.detail__molecules {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.detail__molecules li {
+  padding: 2px 0;
+}
+
+.detail__wiki {
+  margin-top: 28px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 9px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.detail__wiki:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.detail__notfound {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
